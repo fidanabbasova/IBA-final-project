@@ -102,7 +102,116 @@
       "id": 3,
       "name": "other"
     }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "name": "Max",
+      "age": "2",
+      "description": "",
+      "image": null,
+      "statusId": 2,
+      "speciesId": 1,
+      "cityId": 1,
+      "userId": 2,
+      "date": "2011-07-13 13:55:29 +0100",
+      "active": false
+    },
+    {
+      "id": 2,
+      "name": "Lucy",
+      "age": "1",
+      "description": "",
+      "image": null,
+      "statusId": 1,
+      "speciesId": 2,
+      "cityId": 1,
+      "userId": 1,
+      "date": "2019-07-93 19:05:29 +0100",
+      "active": false,
+      "ownerId": 4
+    },
+    {
+      "id": 3,
+      "name": "Ted",
+      "age": "5",
+      "description": "",
+      "image": null,
+      "statusId": 3,
+      "speciesId": 1,
+      "cityId": 1,
+      "userId": 2,
+      "date": "2011-07-13 13:55:29 +0100",
+      "active": true
+    },
+    {
+      "id": 4,
+      "name": "Gogi",
+      "age": "2",
+      "description": "",
+      "image": null,
+      "statusId": 2,
+      "speciesId": 1,
+      "cityId": 1,
+      "userId": 3,
+      "date": "2019-07-93 19:05:29 +0100",
+      "active": true
+    },
+    {
+      "id": 5,
+      "name": "Nolan",
+      "age": "6",
+      "description": "",
+      "image": null,
+      "statusId": 1,
+      "speciesId": 2,
+      "cityId": 1,
+      "userId": 2,
+      "date": "2011-07-13 13:55:29 +0100",
+      "active": true
+    },
+    {
+      "id": 6,
+      "name": "Boss",
+      "age": "1",
+      "description": "",
+      "image": null,
+      "statusId": 3,
+      "speciesId": 2,
+      "cityId": 1,
+      "userId": 3,
+      "date": "2019-07-93 19:05:29 +0100",
+      "active": true
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "postId": 1,
+      "userId": 3,
+      "content": "So sweet",
+      "date": "2019-07-93 19:05:29 +0100"
+    },
+    {
+      "id": 2,
+      "postId": 2,
+      "userId": 1,
+      "content": "I saw this cat near Yasamal",
+      "date": "2019-07-93 19:05:29 +0100"
+    },
+    {
+      "id": 3,
+      "postId": 1,
+      "userId": 3,
+      "content": "So sweet",
+      "date": "2019-07-93 19:05:29 +0100"
+    },
+    {
+      "id": 4,
+      "postId": 6,
+      "userId": 4,
+      "content": "I want to adopt",
+      "date": "2019-07-93 19:05:29 +0100"
+    }
   ]
-
-
 }
