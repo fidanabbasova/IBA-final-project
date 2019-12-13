@@ -44,6 +44,7 @@
   "users": [
     {
       "id": 1,
+      "username": "nemat",
       "name": "Əlinemət",
       "surname": "İsiyev",
       "age": 18,
@@ -52,6 +53,7 @@
     },
     {
       "id": 2,
+      "username": "nigar",
       "name": "Nigar",
       "surname": "Məmmədova",
       "age": 21,
@@ -60,6 +62,7 @@
     },
     {
       "id": 3,
+      "username": "ismayil",
       "name": "İsmayil",
       "surname": "Qasimov",
       "age": 19,
@@ -68,6 +71,7 @@
     },
     {
       "id": 4,
+      "username": "fidan",
       "name": "Fidan",
       "surname": "Abbasova",
       "age": 23,
