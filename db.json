@@ -1,0 +1,73 @@
+{
+  "cities": [
+    {
+      "id": 1,
+      "name": "Bak\u0131"
+    },
+    {
+      "id": 2,
+      "name": "G\u0259nc\u0259"
+    },
+    {
+      "id": 3,
+      "name": "Sumqay\u0131t"
+    },
+    {
+      "id": 4,
+      "name": "Hac\u0131var"
+    },
+    {
+      "id": 5,
+      "name": "\u015e\u0259ki"
+    },
+    {
+      "id": 6,
+      "name": "L\u0259nk\u0259ran"
+    },
+    {
+      "id": 7,
+      "name": "Yevlax"
+    },
+    {
+      "id": 8,
+      "name": "G\u00f6y\u00e7ay"
+    },
+    {
+      "id": 9,
+      "name": "Tovuz"
+    },
+    {
+      "id": 10,
+      "name": "Q\u0259b\u0259l\u0259"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "Post 1"
+    },
+    {
+      "id": 2,
+      "title": "Post 2"
+    },
+    {
+      "id": 3,
+      "title": "Post 3"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "id": 2,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
