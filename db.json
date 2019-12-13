@@ -89,20 +89,6 @@
       "type": "adopt"
     }
   ],
-  "species": [
-    {
-      "id": 1,
-      "name": "dog"
-    },
-    {
-      "id": 2,
-      "name": "cat"
-    },
-    {
-      "id": 3,
-      "name": "other"
-    }
-  ],
   "posts": [
     {
       "id": 1,
@@ -111,7 +97,7 @@
       "description": "",
       "image": null,
       "statusId": 2,
-      "speciesId": 1,
+      "species": "cat",
       "cityId": 1,
       "userId": 2,
       "date": "2011-07-13 13:55:29 +0100",
@@ -124,7 +110,7 @@
       "description": "",
       "image": null,
       "statusId": 1,
-      "speciesId": 2,
+      "species": "dog",
       "cityId": 1,
       "userId": 1,
       "date": "2019-07-93 19:05:29 +0100",
@@ -138,7 +124,7 @@
       "description": "",
       "image": null,
       "statusId": 3,
-      "speciesId": 1,
+      "species": "cat",
       "cityId": 1,
       "userId": 2,
       "date": "2011-07-13 13:55:29 +0100",
@@ -151,7 +137,7 @@
       "description": "",
       "image": null,
       "statusId": 2,
-      "speciesId": 1,
+      "species": "cat",
       "cityId": 1,
       "userId": 3,
       "date": "2019-07-93 19:05:29 +0100",
@@ -164,7 +150,7 @@
       "description": "",
       "image": null,
       "statusId": 1,
-      "speciesId": 2,
+      "species": "dog",
       "cityId": 1,
       "userId": 2,
       "date": "2011-07-13 13:55:29 +0100",
@@ -177,7 +163,7 @@
       "description": "",
       "image": null,
       "statusId": 3,
-      "speciesId": 2,
+      "species": "dog",
       "cityId": 1,
       "userId": 3,
       "date": "2019-07-93 19:05:29 +0100",
