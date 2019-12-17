@@ -1,0 +1,31 @@
+.navbar {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  .nav-item {
+    .nav-link {
+      font-size: 2rem;
+      color: #FFFFFF;
+      transition: all .5s;
+      &:hover {
+        color: #F7941D;
+      }
+    }
+  }
+  .button {
+    border: none;
+    background-color: transparent;
+    &:active {
+      border: none;
+    }
+  }
+  .navbar-img {
+    height: 50px; //temporary
+    filter: invert(100%);
+  }
+  @media screen and (min-width: 992px) {
+    background-color: transparent;
+  }
+}
