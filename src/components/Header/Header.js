@@ -40,10 +40,10 @@ class Header extends Component{
                         })
                     }
                 </div>
-                <a className="carousel-control carousel-control-prev" href="#demo" data-slide="prev">
+                <a className="carousel-control carousel-control-prev" href="#home" data-slide="prev">
                     <i className="carousel-control-item carousel-control-item-left fas fa-arrow-left fa-3x"></i>
                 </a>
-                <a className="carousel-control carousel-control-next" href="#demo" data-slide="next">
+                <a className="carousel-control carousel-control-next" href="#home" data-slide="next">
                     <i className="carousel-control-item carousel-control-item-right fas fa-arrow-right fa-3x"></i>
                 </a>
             </header>

@@ -31,6 +31,7 @@
 }
 .navbar {
   z-index: 50;
+  box-shadow: 0 0 10px 10px rgba(0,0,0,.5);
   .nav-item {
     .nav-link {
       font-size: 2rem;
