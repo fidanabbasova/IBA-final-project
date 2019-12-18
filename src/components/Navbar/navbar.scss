@@ -1,3 +1,4 @@
+@import "./../style";
 .navbar {
   position: absolute;
   width: 100%;
@@ -9,9 +10,17 @@
       font-size: 2rem;
       color: #FFFFFF;
       transition: all .5s;
-      &:hover {
-        color: #F7941D;
+      &:focus {
+        color: #FFFFFF;
       }
+      &:hover {
+        color: #FFFFFF;
+      }
+    }
+  }
+  .nav-item.active {
+    .nav-link {
+      color: #FFFFFF; //temporary
     }
   }
   .button {
@@ -24,6 +33,33 @@
   .navbar-img {
     height: 50px; //temporary
     filter: invert(100%);
+  }
+  .sign-buttons-container {
+    .sign-btn {
+      width: 120px;
+    }
+    .sign-up-btn {
+      border: 2px solid $blue;
+      background: transparent;
+      color: $blue;
+
+      &:hover {
+        border: 2px solid $orange;
+        background: $orange;
+        color: #FFFFFF;
+      }
+    }
+    .sign-in-btn {
+      border: 2px solid $orange;
+      background: transparent;
+      color: $orange;
+
+      &:hover {
+        border: 2px solid $blue;
+        background: $blue;
+        color: #FFFFFF;
+      }
+    }
   }
   @media screen and (min-width: 992px) {
     background-color: transparent;

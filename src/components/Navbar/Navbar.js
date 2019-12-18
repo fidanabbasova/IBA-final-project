@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import NavbarItem from "./NavbarItem";
 import logo from './img/logo-text.png';
 import './navbar.scss';
+import NotLoggedIn from "./NotLoggedIn";
 class Navbar extends Component{
     render() {
         const navbarItems = [
@@ -29,6 +30,7 @@ class Navbar extends Component{
                                 })
                             }
                         </ul>
+                        <NotLoggedIn/>
                     </div>
                 </div>
             </nav>

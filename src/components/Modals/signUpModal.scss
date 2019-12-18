@@ -1,0 +1,50 @@
+@import "./../style";
+.sign-up-modal {
+  .modal-header {
+    background: $blue;
+  }
+  .modal-title, .close-icon {
+    font-weight: bold;
+    font-size: 3rem;
+    color: #FFFFFF;
+  }
+  .modal-body {
+    padding-top: 30px;
+  }
+  .form-group {
+      font-size: 16px;
+    .form-control {
+      font-size: 16px;
+    }
+  }
+  .modal-footer {
+    padding: 20px 0 30px;
+  }
+  .modal-button {
+    padding: 3px 0;
+    width: 50%;
+    margin: 0;
+    font-size: 2rem;
+  }
+  .sign-up-btn {
+    border: 2px solid $blue;
+    background: transparent;
+    color: $blue;
+    transition: all .5s;
+    &:hover {
+      border: 2px solid $orange;
+      background: $orange;
+      color: #FFFFFF;
+    }
+  }
+  .cancel-btn {
+    border: 2px solid $orange;
+    background: transparent;
+    color: $orange;
+    &:hover {
+      border: 2px solid $blue;
+      background: $blue;
+      color: #FFFFFF;
+    }
+  }
+}
