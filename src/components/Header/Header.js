@@ -14,7 +14,7 @@ class Header extends Component{
             carouselItems.push({id: i, name: images[i]});
         }
         return(
-            <header id="demo" className="header carousel slide" data-ride="carousel">
+            <header id="home" className="header carousel slide" data-ride="carousel">
                 <ul className="carousel-indicators">
                     {
                         carouselItems.map((item) => {

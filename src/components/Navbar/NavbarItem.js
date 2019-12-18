@@ -1,10 +1,5 @@
 import React, {Component} from 'react';
-import {
-    BrowserRouter as Router,
-    Link,
-    Route,
-    Switch,
-} from 'react-router-dom';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 let activedFirstItem = true;
 class NavbarItem extends Component{
     render() {
@@ -12,19 +7,15 @@ class NavbarItem extends Component{
         if(activedFirstItem) {
             activedFirstItem = false;
             return(
-                <Router>
-                    <li className="nav-item ml-md-3 active">
-                        <Link to={'/' + name.toLowerCase()} className="nav-link button">{name}</Link>
-                    </li>
-                </Router>
+                <li className="nav-item ml-md-3 active">
+                    <AnchorLink href={'#' + name.toLowerCase()} className="nav-link button">{name}</AnchorLink>
+                </li>
             );
         }else {
             return(
-                <Router>
-                    <li className="nav-item ml-md-3">
-                        <Link to={'/' + name.toLowerCase()} className="nav-link button">{name}</Link>
-                    </li>
-                </Router>
+                <li className="nav-item ml-md-3">
+                    <AnchorLink href={'#' + name.toLowerCase()} className="nav-link button">{name}</AnchorLink>
+                </li>
             );
         }
     }

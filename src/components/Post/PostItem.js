@@ -14,7 +14,6 @@ class PostItem extends Component{
         };
     }
     componentDidMount() {
-        console.log(this.props.post.userId);
         fetch('https://my-json-server.typicode.com/fidanabbasova/petsavers-db/users')
             .then(response => response.json())
             .then(json => {

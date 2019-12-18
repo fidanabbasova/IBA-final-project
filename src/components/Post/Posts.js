@@ -28,7 +28,7 @@ class Posts extends Component{
     };
     render() {
         return(
-            <section className={'post-section ' + this.statusPost() + '-section container-fluid\''}>
+            <section id={this.statusPost()} className={'post-section ' + this.statusPost() + '-section container-fluid\''}>
                 <div className='container'>
                     <h2 className='post-section-title text-uppercase'>Have you <strong className='post-section-title-strong'>{this.props.title}</strong> a pet?</h2>
                     <div className='row'>
