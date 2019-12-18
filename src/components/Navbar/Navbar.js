@@ -2,9 +2,22 @@ import React, {Component} from 'react';
 import NavbarItem from "./NavbarItem";
 import logo from './img/logo-text.png';
 import './navbar.scss';
+import LoggedIn from "./LoggedIn";
 import NotLoggedIn from "./NotLoggedIn";
 class Navbar extends Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+            loggedIn: true,
+        };
+        localStorage.setItem("userId", "1");
+    }
+    loggedIn() {
+        if(localStorage.getItem("userId") !== null) return <LoggedIn/>;
+        else return <NotLoggedIn/>;
+    }
     render() {
+        console.log(localStorage.getItem("userId"));
         const navbarItems = [
             {id: 1, name: 'Home'},
             {id: 2, name: 'Lost'},
@@ -13,7 +26,6 @@ class Navbar extends Component{
             {id: 5, name: 'Contact'}
         ];
         return(
-            // navbar-light bg-light
             <nav className='navbar navbar-expand-lg navbar-light'>
                 <div className='container'>
                     <img src={logo} className="navbar-brand button navbar-img" alt='Logo'/>
@@ -30,7 +42,7 @@ class Navbar extends Component{
                                 })
                             }
                         </ul>
-                        <NotLoggedIn/>
+                        {this.loggedIn()}
                     </div>
                 </div>
             </nav>

@@ -2,9 +2,7 @@ import React, {Component} from "react";
 import icon from './img/icon.png'
 import {
     BrowserRouter as Router,
-    Link,
-    Route,
-    Switch,
+    Link
 } from 'react-router-dom';
 class PostItem extends Component{
     constructor(props) {
@@ -27,24 +25,28 @@ class PostItem extends Component{
     render() {
         const {id, name, age, description, image, date, active} = this.props.post;
         const status = this.props.status.charAt(0).toUpperCase() + this.props.status.substring(1);
-        const {name: userName, mobile} = this.state.user;
+        const {name: userName, surname: userSurname, mobile} = this.state.user;
+        const now = new Date();
+        console.log(now.getMilliseconds());
         return(
            <Router>
-               <Link to={'/posts/' + id} className="post-container col-md-3 col-sm-6">
-                  <div className='post-img-container'>
-                      <div className="post-img" style={{ backgroundImage: "url("+ image +")"}}></div>
-                      <div className="post-hover d-flex justify-content-center align-items-center">
-                          <img src={icon} className="post-hover-icon" alt=""/>
-                      </div>
-                  </div>
-                   <div className="post-content post-content-item">
-                       <h3 className="pet-name">{name}</h3>
-                       <p className="pet-description">{description.substr(0, 60)+'...'}</p>
-                       <h3 className="pet-name">{status} by {userName}</h3>
-                       {/*<p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>*/}
-                       {/*<a href="#" className="btn btn-primary">Go somewhere</a>*/}
-                   </div>
-               </Link>
+               <div className="col-md-3 col-sm-6 my-5 my-sm-0">
+                   <Link to={'/posts/' + id} className="post-container d-block">
+                       <div className='post-img-container'>
+                           <div className="post-img" style={{ backgroundImage: "url("+ image +")"}}></div>
+                           <div className="post-hover d-flex justify-content-center align-items-center">
+                               <img src={icon} className="post-hover-icon" alt=""/>
+                           </div>
+                       </div>
+                       <div className="post-content post-content-item">
+                           <h3 className="pet-name font-weight-bold">{name}</h3>
+                           <h3 className="pet-description">{description.substr(0, 95)+'...'}</h3>
+                           <h3 className="user">{status} by <strong>{userName} {userSurname}</strong></h3>
+                           <h3 className="contact">{mobile}</h3>
+                           <h3 className="post-date"><i className="far fa-clock"></i> {date}</h3>
+                       </div>
+                   </Link>
+               </div>
            </Router>
         )
     }

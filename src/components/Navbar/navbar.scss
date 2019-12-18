@@ -69,23 +69,46 @@
       border: 2px solid $blue;
       background: transparent;
       color: $blue;
-
       &:hover {
         border: 2px solid $orange;
         background: $orange;
         color: #FFFFFF;
+      }
+      &:focus {
+        color: $blue;
       }
     }
     .sign-in-btn {
       border: 2px solid $orange;
       background: transparent;
       color: $orange;
-
       &:hover {
         border: 2px solid $blue;
         background: $blue;
         color: #FFFFFF;
       }
+      &:focus {
+        color: $orange;
+      }
+    }
+  }
+  .user-dropdown {
+    .dropdown-toggle{
+      width: 150px;
+      border: 2px solid $blue;
+      color: $blue;
+      font-size: 16px;
+    }
+    &.show {
+      .dropdown-toggle {
+        background: $blue;
+        color: #FFFFFF;
+      }
+    }
+    .dropdown-item {
+      width: 150px;
+      font-size: 16px;
+      color: #666666;
     }
   }
   @media screen and (min-width: 992px) {

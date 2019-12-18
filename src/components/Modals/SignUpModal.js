@@ -56,7 +56,7 @@ class SignUpModal extends Component {
                                     <select className="form-control" id="city">
                                         {
                                             this.state.cities.map((city) => {
-                                                return(<option value={city.id}>{city.name}</option>);
+                                                return(<option value={city.id} key={city.id}>{city.name}</option>);
                                             })
                                         }
                                     </select>
