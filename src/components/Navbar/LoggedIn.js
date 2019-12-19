@@ -16,7 +16,7 @@ class LoggedIn extends Component {
                 this.setState({user:
                         json.find((user) => {
                             return user.id === "4";
-                            // localStorage.getItem("userId");
+                            localStorage.getItem("userId");
                         })
                 });
             });

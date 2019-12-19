@@ -10,25 +10,27 @@ class Posts extends Component{
     }
     statusPost = () => {
         switch(this.props.statusId) {
-            case 1: return 'lost';
-            case 2: return 'found';
-            case 3: return 'adopt';
+            case "1": return 'lost';
+            case "2": return 'found';
+            case "3": return 'adopt';
         }
     };
     componentDidMount() {
-        fetch('https://my-json-server.typicode.com/fidanabbasova/petsavers-db/posts')
-            .then(response => response.json())
-            .then(json => {
-                this.setState({posts:
-                     json.filter((post) => post.statusId === this.props.statusId)
+        const props = this.props;
+        const getPosts = (props) => {
+            fetch('https://my-json-server.typicode.com/fidanabbasova/petsavers-db/posts')
+                .then(response => response.json())
+                .then(json => {
+                    this.setState({posts:
+                            json.filter((post) => post.statusId === props.statusId)
+                    });
                 });
-            });
-        console.log(this.state.posts);
-
+        };
+        getPosts(props);
     };
     render() {
         return(
-            <section id={'this.statusPost()'} className={'post-section ' + this.statusPost() + '-section container-fluid\''}>
+            <section id={this.statusPost()} className={'post-section ' + this.statusPost() + '-section container-fluid\''}>
                 <div className='container'>
                     <h2 className='post-section-title text-uppercase'>Have you <strong className='post-section-title-strong'>{this.props.title}</strong> a pet?</h2>
                     <div className='row'>

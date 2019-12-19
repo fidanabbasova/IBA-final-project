@@ -12,13 +12,22 @@ class PostItem extends Component{
         };
     }
     componentDidMount() {
-        fetch('https://my-json-server.typicode.com/fidanabbasova/petsavers-db/users')
-            .then(response => response.json())
-            .then(json => {
-                this.setState({user:
-                    json.find(user => user.id === this.props.post.userId)
+        const props = this.props;
+        const getUser = (props) => {
+            fetch('https://my-json-server.typicode.com/fidanabbasova/petsavers-db/users')
+                .then(response => response.json())
+                .then(json => {
+                    console.log('JSON = ', json);
+                    console.log("Propd:", props.post.userId);
+                    this.setState({
+                        user: json.find(function (user) {
+                            return user.id === props.post.userId;
+                        })
+                    });
                 });
-            });
+            };
+
+        getUser(props);
     };
     render() {
         const {id, name, age, description, image, date, active} = this.props.post;

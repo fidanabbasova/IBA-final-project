@@ -13,8 +13,8 @@ function App() {
             <Navbar/>
         </Headroom>
         <Header/>
-        <Posts statusId={1} title={'found'}/>
-        <Posts statusId={2} title={'lost'}/>
+        <Posts statusId={'1'}title={'found'}/>
+        <Posts statusId={'2'} title={'lost'}/>
         <SignUpModal/>
         <SignInModal/>
     </div>

@@ -8,11 +8,14 @@ class SignUpModal extends Component {
         };
     }
     componentDidMount() {
-        fetch('https://my-json-server.typicode.com/fidanabbasova/petsavers-db/cities')
-            .then(response => response.json())
-            .then(json => {
-                this.setState({cities: json});
-            });
+        const getCities = () => {
+            fetch('https://my-json-server.typicode.com/fidanabbasova/petsavers-db/cities')
+                .then(response => response.json())
+                .then(json => {
+                    this.setState({cities: json});
+                });
+        };
+        getCities();
     };
     render() {
         return(

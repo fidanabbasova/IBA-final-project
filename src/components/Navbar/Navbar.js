@@ -10,10 +10,10 @@ class Navbar extends Component{
         this.state = {
             loggedIn: true,
         };
-        localStorage.setItem("userId", "1");
+        // localStorage.setItem("userId", "1");
     }
     loggedIn() {
-        if(localStorage.getItem("userId") !== null) return <LoggedIn/>;
+        if(localStorage.getItem("userId")) return <LoggedIn/>;
         else return <NotLoggedIn/>;
     }
     render() {
