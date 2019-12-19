@@ -16,9 +16,7 @@ class PostItem extends Component{
             .then(response => response.json())
             .then(json => {
                 this.setState({user:
-                    json.find((user) => {
-                        return user.id === this.props.post.userId;
-                    })
+                    json.find(user => user.id === this.props.post.userId)
                 });
             });
     };
@@ -26,8 +24,6 @@ class PostItem extends Component{
         const {id, name, age, description, image, date, active} = this.props.post;
         const status = this.props.status.charAt(0).toUpperCase() + this.props.status.substring(1);
         const {name: userName, surname: userSurname, mobile} = this.state.user;
-        const now = new Date();
-        console.log(now.getMilliseconds());
         return(
            <Router>
                <div className="col-md-3 col-sm-6 my-5 my-sm-0">

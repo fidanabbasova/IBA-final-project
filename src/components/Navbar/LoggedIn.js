@@ -13,7 +13,6 @@ class LoggedIn extends Component {
         fetch('https://my-json-server.typicode.com/fidanabbasova/petsavers-db/users')
             .then(response => response.json())
             .then(json => {
-                console.log(json);
                 this.setState({user:
                         json.find((user) => {
                             return user.id === "4";
@@ -23,7 +22,6 @@ class LoggedIn extends Component {
             });
     };
     render() {
-        console.log(this.state.user);
         const {name, surname} = this.state.user;
         return (
             <div className="user-dropdown nav navbar-nav ml-auto dropdown">

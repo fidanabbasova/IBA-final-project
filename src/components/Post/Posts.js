@@ -20,11 +20,11 @@ class Posts extends Component{
             .then(response => response.json())
             .then(json => {
                 this.setState({posts:
-                     json.filter((post) => {
-                        return post.statusId === this.props.statusId;
-                     })
+                     json.filter((post) => post.statusId === this.props.statusId)
                 });
             });
+        console.log(this.state.posts);
+
     };
     render() {
         return(

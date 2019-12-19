@@ -17,7 +17,7 @@ class Navbar extends Component{
         else return <NotLoggedIn/>;
     }
     render() {
-        console.log(localStorage.getItem("userId"));
+        // console.log(localStorage.getItem("userId"));
         const navbarItems = [
             {id: 1, name: 'Home'},
             {id: 2, name: 'Lost'},
