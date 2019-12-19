@@ -1,3 +1,4 @@
+@import "../style";
 .header {
   box-shadow: 0 0 10px 10px rgba(0,0,0,.5);
   position: relative;
@@ -19,7 +20,7 @@
 
         .bold-text {
           font-size: 6rem;
-          color: #F7941D;
+          color: $orange;
         }
       }
     }
@@ -46,7 +47,7 @@
     &-item {
       transition: all .5s;
       &:hover {
-        color: #F7941D;
+        color: $blue
       }
     }
     &-prev:hover {

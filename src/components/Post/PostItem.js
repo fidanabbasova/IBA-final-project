@@ -1,9 +1,9 @@
 import React, {Component} from "react";
-import icon from './img/icon.png'
 import {
     BrowserRouter as Router,
     Link
 } from 'react-router-dom';
+import icon from './img/icon.png'
 class PostItem extends Component{
     constructor(props) {
         super(props);
@@ -28,7 +28,7 @@ class PostItem extends Component{
         getUser(props);
     };
     render() {
-        const {id, name, age, description, image, date, active} = this.props.post;
+        const {id, name, description, image, date} = this.props.post;
         const status = this.props.status.charAt(0).toUpperCase() + this.props.status.substring(1);
         const {name: userName, surname: userSurname, mobile} = this.state.user;
         return(
@@ -43,10 +43,10 @@ class PostItem extends Component{
                        </div>
                        <div className="post-content post-content-item">
                            <h3 className="pet-name font-weight-bold">{name}</h3>
-                           <h3 className="pet-description">{description.substr(0, 95)+'...'}</h3>
+                           <h3 className="pet-description d-sm-none">{description.substr(0, 80)+'...'}</h3>
                            <h3 className="user">{status} by <strong>{userName} {userSurname}</strong></h3>
-                           <h3 className="contact">{mobile}</h3>
-                           <h3 className="post-date"><i className="far fa-clock"></i> {date}</h3>
+                           <h3 className="contact"><i className="fas fa-phone"></i> {mobile}</h3>
+                           <h3 className="post-date"><i className="far fa-clock font-weight-bold"></i> {date}</h3>
                        </div>
                    </Link>
                </div>

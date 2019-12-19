@@ -1,71 +1,111 @@
 @import "../style";
 .post-section {
-  box-shadow: 0 0 10px 10px rgba(0,0,0,.5);
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, .5);
   padding: 50px;
+
   &-title {
     display: inline-block;
     background: #FFFFFF;
     color: #555555;
-    font-size: 3rem;
-    margin: 5rem 0 3rem;
+    font-size: 4rem;
+    margin: 5rem 0 15px;
   }
-}
-.post-container{
-  padding: 0;
-  height: 100%;
-  background: #FFFFFF;
-  text-decoration: none;
-  color: #666666;
-  &:hover {
+
+  .posts-button {
+    padding: 7px 15px;
+    font-size: 2.4rem;
+    transition: all .5s;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .losts-button {
+    border: 2px solid #FFFFFF;
+    background: transparent;
+    color: #FFFFFF;
+    &:hover {
+      border: 2px solid $orange;
+      background: $orange;
+      color: #FFFFFF;
+    }
+  }
+  .founds-button {
+    border: 2px solid #FFFFFF;
+    background: transparent;
+    color: #FFFFFF;
+    &:hover {
+      border: 2px solid $blue;
+      background: $blue;
+      color: #FFFFFF;
+    }
+  }
+  .post-container {
+    padding: 0;
+    height: 100%;
+    background: #FFFFFF;
     text-decoration: none;
     color: #666666;
-    .post-img {
-      transform: scale(1.2);
-    }
-    .post-hover {
-      opacity: 1;
+
+    &:hover {
+      text-decoration: none;
+      color: #666666;
+
+      .post-img {
+        transform: scale(1.2);
+      }
+
+      .post-hover {
+        opacity: 1;
+      }
     }
   }
-}
-.post-img-container {
-  position: relative;
-  width: 100%;
-  padding-bottom: 100%;
-  overflow: hidden;
-}
-.post-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding-bottom: 100%;
-  background-position: center;
-  background-size: cover;
-  transition: all .5s;
-}
-.post-hover {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,.5);
-  transition: all .5s;
-  &-icon {
-    opacity: .5;
-    width: 40%;
-    filter: invert(100%);
+
+  .post-img-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    overflow: hidden;
   }
-}
-.post-content {
-  padding: 10px 15px 30px;
-}
-.pet-name {
-  font-size: 2rem;
-}
-.pet-description {
-  font-size: 1.6rem;
+
+  .post-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-bottom: 100%;
+    background-position: center;
+    background-size: cover;
+    transition: all .5s;
+  }
+
+  .post-hover {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    transition: all .5s;
+
+    &-icon {
+      opacity: .5;
+      width: 40%;
+      filter: invert(100%);
+    }
+  }
+
+  .post-content {
+    padding: 10px 15px 30px;
+  }
+
+  .pet-name {
+    font-size: 2rem;
+  }
+
+  .pet-description {
+    font-size: 1.6rem;
+  }
 }
 .lost-section {
   background-color: $blue;
@@ -81,5 +121,14 @@
     &-strong {
       color: $blue;
     }
+  }
+}
+@media screen and (max-width: 400px) {
+  .posts-button{
+    display: block;
+    text-align: center;
+  }
+  .post-section-title {
+    width: 100%;
   }
 }
