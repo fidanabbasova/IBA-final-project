@@ -7,7 +7,7 @@ class LoggedIn extends Component {
         };
     }
     logOut() {
-        localStorage.removeItem("userId");
+        // localStorage.removeItem("userId");
     }
     componentDidMount() {
         fetch('https://my-json-server.typicode.com/fidanabbasova/petsavers-db/users')
@@ -15,8 +15,7 @@ class LoggedIn extends Component {
             .then(json => {
                 this.setState({user:
                         json.find((user) => {
-                            return user.id === "4";
-                            localStorage.getItem("userId");
+                            return user.id === localStorage.getItem("userId");
                         })
                 });
             });

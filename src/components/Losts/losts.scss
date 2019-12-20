@@ -14,6 +14,20 @@
       color: $orange;
     }
   }
+  .losts-button {
+      border: 2px solid #FFFFFF;
+      background: transparent;
+      color: #FFFFFF;
+      padding: 7px 15px;
+      font-size: 2.4rem;
+      text-align: right;
+      transition: all .5s;
+      &:hover {
+        border: 2px solid $orange;
+        background: $orange;
+        color: #FFFFFF;
+      }
+    }
   .lost-container {
     padding: 0;
     height: 100%;

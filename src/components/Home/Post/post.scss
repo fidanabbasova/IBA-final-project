@@ -1,7 +1,7 @@
 @import "../../style";
 .post-section {
-  box-shadow: 0 0 10px 10px rgba(0, 0, 0, .5);
-  padding: 50px;
+//   box-shadow: 0 0 10px 10px rgba(0, 0, 0, .5);
+  padding: 30px;
 
   &-title {
     display: inline-block;
@@ -39,13 +39,16 @@
       color: #FFFFFF;
     }
   }
+  .post-section {
+   padding-left: 0; //
+    padding-right: 0; //
+  }
   .post-container {
     padding: 0;
     height: 100%;
     background: #FFFFFF;
     text-decoration: none;
     color: #666666;
-
     &:hover {
       text-decoration: none;
       color: #666666;
@@ -97,6 +100,8 @@
 
   .post-content {
     padding: 10px 15px 30px;
+    display: none !important; //
+
   }
 
   .pet-name {

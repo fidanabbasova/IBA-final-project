@@ -43,7 +43,7 @@ class FoundsItem extends Component{
                         <div className="found-content found-content-item">
                             <h3 className="pet-name font-weight-bold">{name}</h3>
                             <h3 className="pet-description d-sm-none">{description.substr(0, 80)+'...'}</h3>
-                            <h3 className="user">Lost by <strong>{userName} {userSurname}</strong></h3>
+                            <h3 className="user">Found by <strong>{userName} {userSurname}</strong></h3>
                             <h3 className="contact"><i className="fas fa-phone"></i> {mobile}</h3>
                             <h3 className="found-date"><i className="far fa-clock font-weight-bold"></i> {date}</h3>
                         </div>

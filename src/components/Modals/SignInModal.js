@@ -3,7 +3,7 @@ import './signInModal.scss'
 class SignInModal extends Component {
     render() {
         return(
-            <div className="modal sign-in-modal fade" id="signInModal" tabindex="-1" role="dialog"
+            <div className="modal sign-in-modal fade" id="signInModal" tabIndex="-1" role="dialog"
                  aria-labelledby="signInModalTitle" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered" role="document">
                     <div className="modal-content">

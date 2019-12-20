@@ -19,7 +19,7 @@ class Header extends Component{
                     {
                         carouselItems.map((item) => {
                             return(
-                                <CarouselTarget key={item.id}/>
+                                <CarouselTarget key={item.id} dataId={item.id}/>
                             );
                         })
                     }

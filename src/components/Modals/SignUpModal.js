@@ -19,7 +19,7 @@ class SignUpModal extends Component {
     };
     render() {
         return(
-            <div className="modal sign-up-modal fade" id="signUpModal" tabindex="-1" role="dialog"
+            <div className="modal sign-up-modal fade" id="signUpModal" tabIndex="-1" role="dialog"
              aria-labelledby="signUpModalTitle" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered" role="document">
                     <div className="modal-content">
