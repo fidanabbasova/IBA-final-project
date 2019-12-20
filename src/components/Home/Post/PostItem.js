@@ -11,7 +11,7 @@ class PostItem extends Component{
             user: {}
         };
     }
-    componentDidMount() {
+    componentWillMount() {
         const props = this.props;
         const getUser = (props) => {
             fetch('https://my-json-server.typicode.com/fidanabbasova/petsavers-db/users')

@@ -7,7 +7,7 @@ class SignUpModal extends Component {
             cities: []
         };
     }
-    componentDidMount() {
+    componentWillMount() {
         const getCities = () => {
             fetch('https://my-json-server.typicode.com/fidanabbasova/petsavers-db/cities')
                 .then(response => response.json())
@@ -55,7 +55,7 @@ class SignUpModal extends Component {
                                     <input type="tel" className="form-control" id="mobile" placeholder='+9876543210'/>
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="city">Example select</label>
+                                    <label htmlFor="city">City</label>
                                     <select className="form-control" id="city">
                                         {
                                             this.state.cities.map((city) => {

@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
 import PostItem from "./PostItem";
-import {
-    BrowserRouter as Router,
-    Link
-} from 'react-router-dom';
+import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom';
 import './post.scss';
+import Losts from "../../Losts/Losts";
+import Home from "../Home";
 class Posts extends Component{
     constructor(props) {
         super(props);
@@ -19,12 +18,12 @@ class Posts extends Component{
             case "3": return 'adopt';
         }
     };
-    componentDidMount() {
+    componentWillMount() {
         const props = this.props;
         const getFirstFourPosts = (posts) => {
             let firstFourPosts = [];
             for(let i=0; i<4; i++) {
-                firstFourPosts.push(posts.filter((post) => post.statusId === props.statusId)[i]);
+                firstFourPosts.unshift(posts.filter((post) => post.statusId === props.statusId)[i]);
             }
             this.setState({posts: firstFourPosts });
         };
@@ -47,7 +46,13 @@ class Posts extends Component{
                         </div>
                         <div className="col-md-12">
                             <Router>
-                                <Link to={'/' + this.statusPost() + 's/'} className={'posts-button ' + this.statusPost() + 's-button'}><i className="fas fa-paw"></i> {'See all the ' + this.statusPost() + ' pets'}</Link>
+                                <Link to={'/' + this.statusPost() + 's'} className={'posts-button ' + this.statusPost() + 's-button'}>
+                                        <i className="fas fa-paw"></i> {'See all the ' + this.statusPost() + ' pets'}
+                                </Link>
+                                <Switch>
+                                    {/*<Route path="/" exact={true} component={Home}/>*/}
+                                    {/*<Route path="/losts" component={Losts}/>*/}
+                                </Switch>
                             </Router>
                         </div>
                     </div>

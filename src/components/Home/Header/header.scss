@@ -1,7 +1,10 @@
-@import "../style";
+@import "../../style";
 .header {
   box-shadow: 0 0 10px 10px rgba(0,0,0,.5);
   position: relative;
+  .carousel-indicators {
+    z-index: 2;
+  }
   .carousel-inner {
     height: 100vh;
     .dark-bg {

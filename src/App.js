@@ -1,28 +1,29 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Headroom from 'react-headroom';
 import Navbar from './components/Navbar/Navbar';
-import Header from "./components/Header/Header";
-import Posts from "./components/Post/Posts";
 import SignUpModal from "./components/Modals/SignUpModal";
 import SignInModal from "./components/Modals/SignInModal";
-
+import Home from "./components/Home/Home";
+import Losts from "./components/Losts/Losts";
+import Founds from "./components/Founds/Founds";
 function App() {
   return (
-      <Router>
-          <Switch>
-              <Route path="/" component={Navbar}/>
-          </Switch>
-      </Router>
-
-        // <Headroom>
-        //     <Navbar/>
-        // </Headroom>
-        // <Header/>
-        // {/*<Posts statusId={'1'}title={'found'}/>*/}
-        // {/*<Posts statusId={'2'} title={'lost'}/>*/}
-        // {/*<SignUpModal/>*/}
-        // {/*<SignInModal/>*/}
+      <div>
+          <Router>
+              {/*<Link to="/losts">Lost</Link>*/}
+              <SignInModal/>
+              <SignUpModal/>
+              <Headroom>
+                  <Navbar/>
+              </Headroom>
+              <Switch>
+                  <Route path="/" exact={true} component={Home}/>
+                  <Route path="/losts" component={Losts}/>
+                  <Route path="/founds" component={Founds}/>
+              </Switch>
+          </Router>
+      </div>
   );
 }
 export default App;

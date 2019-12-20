@@ -6,11 +6,11 @@ class CarouselTarget extends Component {
         if(activedFirstItem) {
             activedFirstItem = false;
             return(
-                <li ata-target="#demo" data-slide-to={dataId} className="active"></li>
+                <li data-target="#home" data-slide-to={dataId} className="active"></li>
             );
         }else {
             return(
-                <li data-target="#demo" data-slide-to={dataId}></li>
+                <li data-target="#home" data-slide-to={dataId}></li>
             );
         }
     }
