@@ -1,5 +1,24 @@
 @import "../style";
+.losts-filter {
+  position: fixed;
+  right: 0;
+  margin-right: 30px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  //align-items: center;
+  .fas {
+    padding: 1rem;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    font-size: 3rem;
+    background: #F7941D;
+    color: #FFFFFF;
+  }
+}
 .losts-section {
+  min-height: 100vh;
   background: $blue;
   box-shadow: 0 0 10px 10px rgba(0, 0, 0, .5);
   padding: 50px;
@@ -95,4 +114,14 @@
   .pet-description {
     font-size: 1.6rem;
   }
+}
+.tooltip {
+  margin-right: 5px;
+}
+.tooltip .tooltip-inner {
+  background-color: #FFFFFF;
+  color: $orange;
+}
+.tooltip.bs-tooltip-left .arrow:before {
+  border-left-color: #FFFFFF !important;
 }

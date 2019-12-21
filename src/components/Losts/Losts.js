@@ -1,30 +1,21 @@
 import React, {Component} from 'react';
-import LostsItem from "./LostsItem";
 import CreateFoundPost from "./CreateFoundPost";
+import LostAll from "./LostAll";
+import LostDogs from "./LostDogs";
+import LostCats from "./LostCats";
+import LostOthers from "./LostOther";
 import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom';
 import './losts.scss';
-// import Header from "../Home/Header/Header";
-// import Posts from "../Home/Post/Posts";
 class Losts extends Component{
-    constructor(props) {
-        super(props);
-        this.state = {
-            losts: []
-        };
-    }
-    componentWillMount() {
-        const getLosts = () => {
-            fetch('https://my-json-server.typicode.com/fidanabbasova/petsavers-db/posts')
-                .then(response => response.json())
-                .then(json => {
-                    this.setState({losts: json.filter((post) => post.statusId === "1")});
-                });
-        };
-        getLosts(this.props);
-    };
     render() {
         return(
-            <section className="losts-page">
+            <Router> className="losts-page">
+                <div className="losts-filter">
+                    <Link to="/losts/"><i className="fas fa-paw" data-toggle="tooltip" data-placement="left" title="All"></i></Link>
+                    <Link to="/losts/dogs"><i className="fas fa-dog" data-toggle="tooltip" data-placement="left" title="Dog"></i></Link>
+                    <Link to="/losts/cats"><i className="fas fa-cat" data-toggle="tooltip" data-placement="left" title="Cat"></i></Link>
+                    <Link to="/losts/others"><i className="fas fa-fish" data-toggle="tooltip" data-placement="left" title="Other"></i></Link>
+                </div>
                 <CreateFoundPost/>
                 <div className='losts-section container-fluid'>
                     <div className='container'>
@@ -38,18 +29,23 @@ class Losts extends Component{
                                 </button>
                             </div>
                         </div>
-                        <div className='row'>
-                            {
-                                this.state.losts.map((lost) => {
-                                    return(
-                                        <LostsItem key={lost.id} lost={lost}/>
-                                    );
-                                })
-                            }
-                        </div>
+                        <Switch>
+                            <Route path="/losts/" exact={true}>
+                                <LostAll/>
+                            </Route>
+                            <Route path="/losts/dogs">
+                                <LostDogs/>
+                            </Route>
+                            <Route path="/losts/cats">
+                                <LostCats/>
+                            </Route>
+                            <Route path="/losts/others">
+                                <LostOthers/>
+                            </Route>
+                        </Switch>
                     </div>
                 </div>
-            </section>
+            </Router>
         );
     };
 }
