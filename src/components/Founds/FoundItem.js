@@ -31,25 +31,23 @@ class FoundItem extends Component{
         const {id, name, description, image, date} = this.props.found;
         const {name: userName, surname: userSurname, mobile} = this.state.user;
         return(
-            <Router>
-                <div className="col-md-3 col-sm-6 my-5 mb-sm-0">
-                    <Link to={'/founds/' + id} className="found-container d-block">
-                        <div className='found-img-container'>
-                            <div className="found-img" style={{ backgroundImage: "url("+ image +")"}}></div>
-                            <div className="found-hover d-flex justify-content-center align-items-center">
-                                <img src={icon} className="found-hover-icon" alt=""/>
-                            </div>
+            <div className="col-md-3 col-sm-6 my-5 mb-sm-0">
+                <Link to={'/founds/' + id} className="found-container d-block">
+                    <div className='found-img-container'>
+                        <div className="found-img" style={{ backgroundImage: "url("+ image +")"}}></div>
+                        <div className="found-hover d-flex justify-content-center align-items-center">
+                            <img src={icon} className="found-hover-icon" alt=""/>
                         </div>
-                        <div className="found-content found-content-item">
-                            <h3 className="pet-name font-weight-bold">{name}</h3>
-                            <h3 className="pet-description d-sm-none">{description.substr(0, 80)+'...'}</h3>
-                            <h3 className="user">Found by <strong>{userName} {userSurname}</strong></h3>
-                            <h3 className="contact"><i className="fas fa-phone"></i> {mobile}</h3>
-                            <h3 className="found-date"><i className="far fa-clock font-weight-bold"></i> {date}</h3>
-                        </div>
-                    </Link>
-                </div>
-            </Router>
+                    </div>
+                    <div className="found-content found-content-item">
+                        <h3 className="pet-name font-weight-bold">{name}</h3>
+                        <h3 className="pet-description d-sm-none">{description.substr(0, 80)+'...'}</h3>
+                        <h3 className="user">Found by <strong>{userName} {userSurname}</strong></h3>
+                        <h3 className="contact"><i className="fas fa-phone"></i> {mobile}</h3>
+                        <h3 className="found-date"><i className="far fa-clock font-weight-bold"></i> {date}</h3>
+                    </div>
+                </Link>
+            </div>
         )
     }
 }

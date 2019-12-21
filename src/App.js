@@ -7,6 +7,7 @@ import SignInModal from "./components/Modals/SignInModal";
 import Home from "./components/Home/Home";
 import Losts from "./components/Losts/Losts";
 import Founds from "./components/Founds/Founds";
+import Details from "./components/Details/Details";
 function App() {
   return (
       <div>
@@ -18,6 +19,8 @@ function App() {
               </Headroom>
               <Switch>
                   <Route path="/" exact={true} component={Home}/>
+                  <Route path="/losts/:id" component={Details}/>
+                  <Route path="/founds/:id" component={Details}/>
                   <Route path="/losts" component={Losts}/>
                   <Route path="/founds" component={Founds}/>
               </Switch>

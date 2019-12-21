@@ -21,7 +21,7 @@ class Founds extends Component{
                     <div className='container'>
                         <div className="row">
                             <div className="col-md-12">
-                                <h2 className='founds-section-title text-uppercase'>All our <strong className='founds-section-title-strong'>found</strong> pets</h2>
+                                <h2 className='founds-section-title text-uppercase'>Our <strong className='founds-section-title-strong'>found</strong> pets</h2>
                             </div>
                             <div className="col-md-12">
                                 <button className='founds-button'type="button" data-toggle="modal" data-target="#createLostPost">

@@ -36,7 +36,7 @@ class Contact extends Component{
                                 <div className="form-group">
                                     <textarea className="form-control" rows="5" placeholder="Write us a message" required></textarea>
                                 </div>
-                                <button className="submit-button col-sm-auto" type="submit">Send Message</button>
+                                <button className="submit-button col-sm-auto text-uppercase" type="submit">Send Message</button>
                             </form>
                         </div>
                     </div>
