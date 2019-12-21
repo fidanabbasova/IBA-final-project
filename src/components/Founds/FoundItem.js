@@ -4,7 +4,7 @@ import {
     Link
 } from 'react-router-dom';
 import icon from './img/icon.png'
-class FoundsItem extends Component{
+class FoundItem extends Component{
     constructor(props) {
         super(props);
         this.state = {
@@ -53,4 +53,4 @@ class FoundsItem extends Component{
         )
     }
 }
-export default FoundsItem;
+export default FoundItem;

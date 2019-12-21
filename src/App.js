@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Headroom from 'react-headroom';
 import Navbar from './components/Navbar/Navbar';
 import SignUpModal from "./components/Modals/SignUpModal";
@@ -11,7 +11,6 @@ function App() {
   return (
       <div>
           <Router>
-              {/*<Link to="/losts">Lost</Link>*/}
               <SignInModal/>
               <SignUpModal/>
               <Headroom>

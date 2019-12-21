@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
-import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom';
-import './losts.scss';
-import LostItem from "./LostItem";
-class LostCats extends Component {
+import './founds.scss';
+import FoundItem from "./FoundItem";
+class FoundAll extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            losts: []
+            founds: []
         };
     }
     componentWillMount() {
@@ -14,7 +13,7 @@ class LostCats extends Component {
             fetch('https://my-json-server.typicode.com/fidanabbasova/petsavers-db/posts')
                 .then(response => response.json())
                 .then(json => {
-                    this.setState({losts: json.filter((post) => post.statusId === "1" && post.speciesId == "2")});
+                    this.setState({founds: json.filter((post) => post.statusId === "1")});
                 });
         };
         getLosts(this.props);
@@ -23,9 +22,9 @@ class LostCats extends Component {
         return(
             <div className='row'>
                 {
-                    this.state.losts.map((lost) => {
+                    this.state.founds.map((found) => {
                         return(
-                            <LostItem key={lost.id} lost={lost}/>
+                            <FoundItem key={found.id} found={found}/>
                         );
                     })
                 }
@@ -33,4 +32,4 @@ class LostCats extends Component {
         );
     }
 }
-export default  LostCats;
+export default  FoundAll;

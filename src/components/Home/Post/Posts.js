@@ -45,15 +45,15 @@ class Posts extends Component{
                             <h2 className='post-section-title text-uppercase'>Have you <strong className='post-section-title-strong'>{this.props.title}</strong> a pet?</h2>
                         </div>
                         <div className="col-md-12">
-                            <Router>
+                            {/*<Router>*/}
                                 <Link to={'/' + this.statusPost() + 's'} className={'posts-button ' + this.statusPost() + 's-button'}>
                                         <i className="fas fa-paw"></i> {'See all the ' + this.statusPost() + ' pets'}
                                 </Link>
-                                <Switch>
-                                    {/*<Route path="/" exact={true} component={Home}/>*/}
-                                    {/*<Route path="/losts" component={Losts}/>*/}
-                                </Switch>
-                            </Router>
+                                {/*<Switch>*/}
+                                {/*    <Route path="/losts" exact={true} >shndfjdsh</Route>*/}
+                                {/*    /!*<Route path="/losts" component={Losts}/>*!/*/}
+                                {/*</Switch>*/}
+                            {/*</Router>*/}
                         </div>
                     </div>
                     <div className='row'>

@@ -1,10 +1,8 @@
 import React, {Component} from 'react';
-let activedFirstItem = true;
 class CarouselItem extends Component{
     render() {
-        const {name} = this.props;
-        if(activedFirstItem) {
-            activedFirstItem = false;
+        const {name, activedFirstItem} = this.props;
+        if(activedFirstItem === 1) {
             return(
                 <div className="carousel-item active">
                     <img src={name} className='carousel-img'/>
@@ -15,6 +13,7 @@ class CarouselItem extends Component{
                 <div className="carousel-item">
                     <img src={name} className="carousel-img"/>
                 </div>
+
             );
         }
     }

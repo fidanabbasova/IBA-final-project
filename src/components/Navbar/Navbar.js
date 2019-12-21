@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom';
 import NavbarItem from "./NavbarItem";
 import logo from './img/logo-text.png';
 import './navbar.scss';
@@ -28,7 +29,9 @@ class Navbar extends Component{
         return(
             <nav className='navbar navbar-expand-lg navbar-light'>
                 <div className='container'>
-                    <img src={logo} className="navbar-brand button navbar-img" alt='Logo'/>
+                    <Link to={"/"}>
+                        <img src={logo} className="navbar-brand button navbar-img" alt='Logo'/>
+                    </Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>

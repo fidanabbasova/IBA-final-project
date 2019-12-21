@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
-import CreateFoundPost from "./CreateFoundPost";
+import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom';
 import LostAll from "./LostAll";
 import LostDogs from "./LostDogs";
 import LostCats from "./LostCats";
 import LostOthers from "./LostOther";
-import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom';
+import CreateFoundPost from "./CreateFoundPost";
 import './losts.scss';
 class Losts extends Component{
     render() {
         return(
-            <Router> className="losts-page">
+            <Router className="losts-page">
                 <div className="losts-filter">
                     <Link to="/losts/"><i className="fas fa-paw" data-toggle="tooltip" data-placement="left" title="All"></i></Link>
                     <Link to="/losts/dogs"><i className="fas fa-dog" data-toggle="tooltip" data-placement="left" title="Dog"></i></Link>

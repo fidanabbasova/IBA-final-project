@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom';
 import './losts.scss';
-import LostsItem from "./LostsItem";
+import LostItem from "./LostItem";
 class LostDogs extends Component {
     constructor(props) {
         super(props);
@@ -25,7 +25,7 @@ class LostDogs extends Component {
                 {
                     this.state.losts.map((lost) => {
                         return(
-                            <LostsItem key={lost.id} lost={lost}/>
+                            <LostItem key={lost.id} lost={lost}/>
                         );
                     })
                 }

@@ -1,4 +1,21 @@
 @import "../style";
+.founds-filter {
+  position: fixed;
+  right: 0;
+  margin-right: 30px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .fas {
+    padding: 1rem;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    font-size: 3rem;
+    background: $blue;
+    color: #FFFFFF;
+  }
+}
 .founds-section {
   min-height: 100vh;
   background: $orange;
@@ -96,4 +113,14 @@
   .pet-description {
     font-size: 1.6rem;
   }
+}
+.tooltip {
+  margin-right: 5px;
+}
+.tooltip .tooltip-inner {
+  background-color: #FFFFFF;
+  color: $blue;
+}
+.tooltip.bs-tooltip-left .arrow:before {
+  border-left-color: #FFFFFF !important;
 }

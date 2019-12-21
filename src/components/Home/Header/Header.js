@@ -8,6 +8,8 @@ function importAll(r) {
 }
 class Header extends Component{
     render() {
+        let activedItem = 0;
+        let activatedTarget = 0;
         const images = importAll(require.context('./img/', false, /\.(png|jpe?g|svg)$/));
         let carouselItems = [];
         for (let i=0; i<images.length; i++) {
@@ -18,8 +20,9 @@ class Header extends Component{
                 <ul className="carousel-indicators">
                     {
                         carouselItems.map((item) => {
+                            activatedTarget ++;
                             return(
-                                <CarouselTarget key={item.id} dataId={item.id}/>
+                                <CarouselTarget key={item.id} dataId={item.id} activedFirstItem= {activatedTarget}/>
                             );
                         })
                     }
@@ -34,8 +37,9 @@ class Header extends Component{
                     </div>
                     {
                         carouselItems.map((item) => {
+                            activedItem ++;
                             return(
-                                <CarouselItem key={item.id} dataId={item.id} name={item.name}/>
+                                <CarouselItem key={item.id} dataId={item.id} name={item.name} activedFirstItem= {activedItem}/>
                             );
                         })
                     }

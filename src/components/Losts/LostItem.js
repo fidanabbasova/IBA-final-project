@@ -4,7 +4,7 @@ import {
     Link
 } from 'react-router-dom';
 import icon from './img/icon.png'
-class LostsItem extends Component{
+class LostItem extends Component{
     constructor(props) {
         super(props);
         this.state = {
@@ -53,4 +53,4 @@ class LostsItem extends Component{
         )
     }
 }
-export default LostsItem;
+export default LostItem;
