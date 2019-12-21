@@ -32,8 +32,10 @@ class Navbar extends Component{
                     <Link to={"/"}>
                         <img src={logo} className="navbar-brand button navbar-img" alt='Logo'/>
                     </Link>
-                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
+                    <button className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <div className="navbar-toggler-line navbar-toggler-line-top"></div>
+                        <div className="navbar-toggler-line navbar-toggler-line-middle"></div>
+                        <div className="navbar-toggler-line navbar-toggler-line-bottom"></div>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav ml-auto">

@@ -5,7 +5,7 @@ class FoundDogs extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            losts: []
+            founds: []
         };
     }
     componentWillMount() {
@@ -13,7 +13,7 @@ class FoundDogs extends Component {
             fetch('https://my-json-server.typicode.com/fidanabbasova/petsavers-db/posts')
                 .then(response => response.json())
                 .then(json => {
-                    this.setState({losts: json.filter((post) => post.statusId === "2" && post.speciesId == "1")});
+                    this.setState({founds: json.filter((post) => post.statusId === "2" && post.speciesId == "1")});
                 });
         };
         getLosts(this.props);
@@ -22,9 +22,9 @@ class FoundDogs extends Component {
         return(
             <div className='row'>
                 {
-                    this.state.losts.map((lost) => {
+                    this.state.founds.map((found) => {
                         return(
-                            <FoundItem key={lost.id} lost={lost}/>
+                            <FoundItem key={found.id} found={found}/>
                         );
                     })
                 }

@@ -33,7 +33,7 @@ class PostItem extends Component{
         const {name: userName, surname: userSurname, mobile} = this.state.user;
         return(
            <Router>
-               <div className="col-md-3 col-sm-6 my-5 mb-sm-0 post-section">
+               <div className="col-md-3 col-sm-6 py-0 px-0 mx-0 my-0">
                    <Link to={'/posts/' + id} className="post-container d-block">
                        <div className='post-img-container'>
                            <div className="post-img" style={{ backgroundImage: "url("+ image +")"}}></div>

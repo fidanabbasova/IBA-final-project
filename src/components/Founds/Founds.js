@@ -12,19 +12,19 @@ class Founds extends Component{
             <Router className="founds-page">
                 <div className="founds-filter">
                     <Link to="/founds/"><i className="fas fa-paw" data-toggle="tooltip" data-placement="left" title="All"></i></Link>
-                    <Link to="/founds/dogs"><i className="fas fa-dog" data-toggle="tooltip" data-placement="left" title="Dog"></i></Link>
-                    <Link to="/founds/cats"><i className="fas fa-cat" data-toggle="tooltip" data-placement="left" title="Cat"></i></Link>
-                    <Link to="/founds/others"><i className="fas fa-fish" data-toggle="tooltip" data-placement="left" title="Other"></i></Link>
+                    <Link to="/founds/dogs"><i className="fas fa-dog" data-toggle="tooltip" data-placement="left" title="Dogs"></i></Link>
+                    <Link to="/founds/cats"><i className="fas fa-cat" data-toggle="tooltip" data-placement="left" title="Cats"></i></Link>
+                    <Link to="/founds/others"><i className="fas fa-otter" data-toggle="tooltip" data-placement="left" title="Others"></i></Link>
                 </div>
                 <CreateLostPost/>
                 <div className='founds-section container-fluid'>
                     <div className='container'>
                         <div className="row">
                             <div className="col-md-12">
-                                <h2 className='founds-section-title text-uppercase'>All our <strong className='found-section-title-strong'>found</strong> pets</h2>
+                                <h2 className='founds-section-title text-uppercase'>All our <strong className='founds-section-title-strong'>found</strong> pets</h2>
                             </div>
                             <div className="col-md-12">
-                                <button className='founds-button'type="button" data-toggle="modal" data-target="#createFoundPost">
+                                <button className='founds-button'type="button" data-toggle="modal" data-target="#createLostPost">
                                     <i className="fas fa-paw"></i> Create post for your found pet
                                 </button>
                             </div>

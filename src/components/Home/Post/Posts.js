@@ -45,18 +45,12 @@ class Posts extends Component{
                             <h2 className='post-section-title text-uppercase'>Have you <strong className='post-section-title-strong'>{this.props.title}</strong> a pet?</h2>
                         </div>
                         <div className="col-md-12">
-                            {/*<Router>*/}
-                                <Link to={'/' + this.statusPost() + 's'} className={'posts-button ' + this.statusPost() + 's-button'}>
-                                        <i className="fas fa-paw"></i> {'See all the ' + this.statusPost() + ' pets'}
-                                </Link>
-                                {/*<Switch>*/}
-                                {/*    <Route path="/losts" exact={true} >shndfjdsh</Route>*/}
-                                {/*    /!*<Route path="/losts" component={Losts}/>*!/*/}
-                                {/*</Switch>*/}
-                            {/*</Router>*/}
+                            <Link to={'/' + this.statusPost() + 's'} className={'posts-button ' + this.statusPost() + 's-button'}>
+                                    <i className="fas fa-paw"></i> {'See all the ' + this.statusPost() + ' pets'}
+                            </Link>
                         </div>
                     </div>
-                    <div className='row'>
+                    <div className='row post-row'>
                         {
                             this.state.posts.map((post) => {
                                 return(

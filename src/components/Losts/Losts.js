@@ -12,9 +12,9 @@ class Losts extends Component{
             <Router className="losts-page">
                 <div className="losts-filter">
                     <Link to="/losts/"><i className="fas fa-paw" data-toggle="tooltip" data-placement="left" title="All"></i></Link>
-                    <Link to="/losts/dogs"><i className="fas fa-dog" data-toggle="tooltip" data-placement="left" title="Dog"></i></Link>
-                    <Link to="/losts/cats"><i className="fas fa-cat" data-toggle="tooltip" data-placement="left" title="Cat"></i></Link>
-                    <Link to="/losts/others"><i className="fas fa-fish" data-toggle="tooltip" data-placement="left" title="Other"></i></Link>
+                    <Link to="/losts/dogs"><i className="fas fa-dog" data-toggle="tooltip" data-placement="left" title="Dogs"></i></Link>
+                    <Link to="/losts/cats"><i className="fas fa-cat" data-toggle="tooltip" data-placement="left" title="Cats"></i></Link>
+                    <Link to="/losts/others"><i className="fas fa-otter" data-toggle="tooltip" data-placement="left" title="Others"></i></Link>
                 </div>
                 <CreateFoundPost/>
                 <div className='losts-section container-fluid'>
