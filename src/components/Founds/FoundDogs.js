@@ -13,7 +13,7 @@ class FoundDogs extends Component {
             fetch('https://my-json-server.typicode.com/fidanabbasova/petsavers-db/posts')
                 .then(response => response.json())
                 .then(json => {
-                    this.setState({founds: json.filter((post) => post.statusId === "2" && post.speciesId == "1")});
+                    this.setState({founds: json.filter((post) => post.statusId === "2" && post.speciesId === "1")});
                 });
         };
         getLosts(this.props);

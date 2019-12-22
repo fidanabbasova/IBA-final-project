@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom';
 import './losts.scss';
 import LostItem from "./LostItem";
 class LostAll extends Component {

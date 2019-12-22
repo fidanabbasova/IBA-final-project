@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
 import PostItem from "./PostItem";
-import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './post.scss';
-import Losts from "../../Losts/Losts";
-import Home from "../Home";
 class Posts extends Component{
     constructor(props) {
         super(props);
@@ -16,6 +14,7 @@ class Posts extends Component{
             case "1": return 'lost';
             case "2": return 'found';
             case "3": return 'adopt';
+            default: return false;
         }
     };
     componentWillMount() {

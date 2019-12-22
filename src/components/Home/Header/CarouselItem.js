@@ -5,13 +5,13 @@ class CarouselItem extends Component{
         if(activedFirstItem === 1) {
             return(
                 <div className="carousel-item active">
-                    <img src={name} className='carousel-img'/>
+                    <img src={name} className='carousel-img' alt="Carousel img removed"/>
                 </div>
             );
         }else {
             return(
                 <div className="carousel-item">
-                    <img src={name} className="carousel-img"/>
+                    <img src={name} className="carousel-img" alt="Carousel img removed"/>
                 </div>
 
             );

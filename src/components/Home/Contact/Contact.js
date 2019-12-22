@@ -11,7 +11,7 @@ class Contact extends Component{
                                 <div className="gmap_canvas col-md-12">
                                 <iframe className="col-md-12" height="600" id="gmap_canvas"
                                 src="https://maps.google.com/maps?q=bayil%20plaza&t=&z=17&ie=UTF8&iwloc=&output=embed"
-                                frameBorder="0" scrolling="yes" marginHeight="0" marginWidth="0"></iframe>
+                                frameBorder="0" scrolling="yes" marginHeight="0" marginWidth="0" title="map"></iframe>
                                 <a href="https://www.embedgooglemap.net">embedgooglemap.net</a></div>
                             </div>
                         </div>

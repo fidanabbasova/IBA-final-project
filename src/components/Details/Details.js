@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {BrowserRouter as Router, Link, Route, Switch, useParams} from "react-router-dom";
+import {BrowserRouter as Router} from "react-router-dom";
 import './details.scss'
 import icon from "./img/icon.png";
 class Details extends Component {
@@ -30,7 +30,6 @@ class Details extends Component {
         fetch('https://my-json-server.typicode.com/fidanabbasova/petsavers-db/posts/' + id)
             .then(response => response.json())
             .then(json => {
-                // console.log(json);
                 this.setState({post: json});
             })
             .then(() => {
@@ -49,7 +48,7 @@ class Details extends Component {
             });
     };
     render() {
-        const {id, name, description, image, statusId} = this.state.post;
+        const { name, description, image, statusId} = this.state.post;
         const {name: userName, surname: userSurname, mobile} = this.state.user;
         const {name: city} = this.state.city;
         let date =  this.state.post.date;
@@ -58,6 +57,7 @@ class Details extends Component {
                 case "1": return "Lost";
                 case "2": return "Found";
                 case "3": return "Adopt";
+                default: return false;
             }
         };
         return (

@@ -7,7 +7,7 @@ class LoggedIn extends Component {
         };
     }
     logOut() {
-        localStorage.removeItem("userId");
+        if(localStorage.getItem("userId"))  localStorage.removeItem("userId");
     }
     componentDidMount() {
         fetch('https://my-json-server.typicode.com/fidanabbasova/petsavers-db/users')
@@ -24,13 +24,13 @@ class LoggedIn extends Component {
         const {name, surname} = this.state.user;
         return (
             <div className="user-dropdown nav navbar-nav ml-auto dropdown">
-                <button className="btn dropdown-toggle" role="button" id="dropdownUser"
+                <button className="btn dropdown-toggle" id="dropdownUser"
                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     {name} {surname}
                 </button>
                 <div className="dropdown-menu" aria-labelledby="dropdownUser">
                     <button className="dropdown-item"><i className="fas fa-user-circle"></i> Profile</button>
-                    <button className="dropdown-item" onClick={this.logOut()}><i className="fas fa-sign-out-alt"></i> Log out</button>
+                    <button className="dropdown-item"><i className="fas fa-sign-out-alt"></i> Log out</button>
                 </div>
             </div>
         );

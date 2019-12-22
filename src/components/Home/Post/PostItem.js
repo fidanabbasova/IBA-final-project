@@ -1,8 +1,5 @@
 import React, {Component} from "react";
-import {
-    BrowserRouter as Router,
-    Link
-} from 'react-router-dom';
+import {  Link } from 'react-router-dom';
 import icon from './img/icon.png'
 class PostItem extends Component{
     constructor(props) {
