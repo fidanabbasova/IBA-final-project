@@ -1,0 +1,157 @@
+@import "./../style";
+.headroom-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+}
+.headroom {
+  position: relative;
+  background: #FFFFFF;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
+.headroom--unfixed {
+  position: relative;
+  transform: translateY(0);
+}
+.headroom--scrolled {
+  transition: transform 200ms ease-in-out;
+}
+.headroom--unpinned {
+  position: fixed;
+  transform: translateY(-100%);
+}
+.headroom--pinned {
+  position: fixed;
+  transform: translateY(0%);
+}
+.navbar {
+  z-index: 50;
+  box-shadow: 0 0 10px 10px rgba(0,0,0,.5);
+  .nav-item {
+    .nav-link {
+      font-size: 2rem;
+      color: #666666;
+      transition: all .5s;
+      &:focus {
+        color: #666666;
+      }
+      &:hover {
+        color: #666666;
+      }
+    }
+  }
+  .nav-item.active {
+    .nav-link {
+      color: #666666; //temporary
+    }
+  }
+  .button {
+    border: none;
+    background-color: transparent;
+    &:active {
+      border: none;
+    }
+  }
+  .navbar-toggler {
+    width: 41px;
+    height: 41px;
+    border: 1px solid $blue;
+    border-radius: 50%;
+    &:hover {
+      cursor: pointer;
+    }
+    &:focus {
+      outline: none;
+    }
+    &-line {
+      margin: 2px auto;
+      width: 16px;
+      height: 2px;
+      background: $blue;
+      transition: all .5s ease;
+    }
+  }
+  .navbar-toggler:not(.collapsed) {
+    background: $blue;
+    .navbar-toggler-line {
+        width: 20px;
+        transform-origin: left center;
+        background: #FFFFFF;
+        &-top {
+          transform: translateX(3px) translateY(-3px) rotate(45deg);
+        }
+
+        &-middle {
+          opacity: 0;
+        }
+
+        &-bottom {
+          transform: translateX(3px) translateY(3px) rotate(-45deg);
+        }
+      }
+  }
+
+
+  .navbar-img {
+    height: 50px; //temporary
+    //filter: invert(100%);
+  }
+  .sign-buttons-container {
+    .sign-btn {
+      width: 120px;
+    }
+    .sign-up-btn {
+      border: 2px solid $blue;
+      background: transparent;
+      color: $blue;
+      &:hover {
+        border: 2px solid $orange;
+        background: $orange;
+        color: #FFFFFF;
+      }
+      &:focus {
+        color: $blue;
+      }
+    }
+    .sign-in-btn {
+      border: 2px solid $orange;
+      background: transparent;
+      color: $orange;
+      &:hover {
+        border: 2px solid $blue;
+        background: $blue;
+        color: #FFFFFF;
+      }
+      &:focus {
+        color: $orange;
+      }
+    }
+  }
+  .user-dropdown {
+    .dropdown-toggle{
+      width: 150px;
+      border: 2px solid $blue;
+      color: $blue;
+      font-size: 16px;
+    }
+    &.show {
+      .dropdown-toggle {
+        background: $blue;
+        color: #FFFFFF;
+      }
+    }
+    .dropdown-item {
+      width: 150px;
+      font-size: 16px;
+      color: #666666;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    background-color: transparent;
+  }
+}

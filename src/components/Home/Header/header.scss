@@ -1,0 +1,93 @@
+@import "../../style";
+.header {
+  box-shadow: 0 0 10px 10px rgba(0,0,0,.5);
+  position: relative;
+  .carousel-indicators {
+    padding-bottom: 20px;
+    z-index: 2;
+    &-list {
+        opacity: .4;
+        margin: 0 1rem;
+        width: auto;
+        height: auto;
+        text-indent: 0;
+        background: transparent;
+    }
+    &-icon {
+        font-size: 4rem;
+        color: #FFFFFF;
+        transition: all 1s;
+        &:hover {
+            color: $blue;
+        }
+    }
+    .active {
+         opacity: .6;
+         .carousel-indicators-icon {
+            transform: translateY(-20px);
+            color: $orange;
+        }
+    }
+  }
+  .carousel-inner {
+    height: 100vh;
+    .dark-bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, .75);
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .header-content {
+        font-size: 6rem;
+        font-family: 'Josefin Sans', sans-serif;
+        color: rgba(255, 255, 255, .9);
+
+        .bold-text {
+          font-size: 6rem;
+          color: $orange;
+        }
+      }
+    }
+    .carousel-item {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      //display: block;
+      .carousel-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @media (orientation: landscape) {
+          width: 100%;
+        }
+        @media (orientation: portrait) {
+          height: 100vh;
+        }
+      }
+    }
+  }
+  .carousel-control {
+    &-item {
+      transition: all .5s;
+    }
+    &-prev:hover {
+       .carousel-control-item {
+         transform: scale(1.4) translateX(-10px);
+       }
+    }
+    &-next:hover {
+      .carousel-control-item {
+        transform: scale(1.4) translateX(10px);
+      }
+    }
+    &:hover {
+        .carousel-control-item {
+            color: $blue;
+        }
+    }
+  }
+}

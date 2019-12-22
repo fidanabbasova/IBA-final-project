@@ -1,0 +1,42 @@
+@import "../../style";
+
+.contact-section {
+  background: #FFFFFF;
+  &-title {
+    display: inline-block;
+    color: #555555;
+    font-size: 4rem;
+    margin: 5rem 0 15px;
+    &-strong {
+      color: $orange;
+    }
+  }
+  .message-section {
+    padding-bottom: 30px;
+  }
+  .form-control {
+    font-size: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid $blue;
+    border-radius: 0;
+  }
+  .submit-button {
+    padding: 7px 15px;
+    font-size: 20px;
+    transition: all .5s;
+    border: 2px solid $blue;
+    background: transparent;
+    color: $blue;
+    &:hover {
+      background: $blue;
+      color: #FFFFFF;
+    }
+  }
+  .map-container {
+    padding: 0;
+  }
+}
+.mapouter{position:relative;text-align:right;height:600px; padding: 0}
+.gmap_canvas {overflow:hidden;background:none!important;height:600px; padding: 0}
+#gmap_canvas {padding: 0}
