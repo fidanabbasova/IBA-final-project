@@ -10,12 +10,12 @@ class Footer extends Component {
                     <div className="row footer-section">
                         <div className="col-md-8">
                             <div className="row footer-container">
-                                <div className="col-sm-5">
+                                <div className="col-sm-4">
                                     <Link to="/">
                                         <img src={logo} alt="" className="footer-logo col-12"/>
                                     </Link>
                                 </div>
-                                <div className="col-sm-7 footer-icon-container">
+                                <div className="col-sm-8 footer-icon-container">
                                     <Link to="/"><i className="footer-icon fab fa-facebook-f"></i></Link>
                                     <Link to="/"><i className="footer-icon fab fa-instagram"></i></Link>
                                     <Link to="/"><i className="footer-icon fab fa-twitter"></i></Link>
