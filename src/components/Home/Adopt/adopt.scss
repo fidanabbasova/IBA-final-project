@@ -18,7 +18,9 @@
   height: auto;
 }
 .adopt {
-  position: relative;
+  &-section {
+    position: relative;
+  }
   &-bg {
     position: absolute;
     top: 0;

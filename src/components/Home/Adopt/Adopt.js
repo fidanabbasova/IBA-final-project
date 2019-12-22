@@ -11,7 +11,7 @@ class Adopt extends Component {
                         <source src={video} type="video/mp4"/>
                     </video>
                 </div>
-                <div id="adopt" className="adopt">
+                <div id="adopt" className="adopt-section">
                     <div className="adopt-bg" style={{ backgroundImage: "url("+ image +")"}}></div>
                     <section className="adopt-content">
                         <h2 className="adopt-title">Adopt me</h2>
