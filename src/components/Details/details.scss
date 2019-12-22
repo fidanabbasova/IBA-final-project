@@ -44,6 +44,8 @@
     width: 100%;
     padding-bottom: 100%;
     overflow: hidden;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, .3);
+
   }
 
   .pet-img {
@@ -79,12 +81,32 @@
   }
 
   .pet-name {
-    font-size: 2rem;
+    font-size: 30px;
+    color: $blue;
+    font-weight: bold;
+    text-transform: uppercase;
   }
 
-  .pet-description, .user, .contact, .found-date {
-    font-size: 16px;
+  .pet-description, .user, .contact, .date, .city {
+    font-size: 18px;
     margin-top: 20px;
   }
-
+  .pet-description {
+    color: #777777;
+  }
+  .user {
+    color: #555555;
+  }
+  .contact, .date, .city {
+    color: #555555;
+    .fas {
+      color: $blue;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      font-size: 20px;
+      border-radius: 50%;
+    }
+  }
 }

@@ -7,7 +7,8 @@ class Details extends Component {
         super(props);
         this.state = {
             post: {},
-            user: {}
+            user: {},
+            city: {}
         };
     }
     componentWillMount() {
@@ -16,6 +17,13 @@ class Details extends Component {
             this.setState({
                 user: json.find(function (user) {
                     return user.id === post.userId;
+                })
+            });
+        };
+        const getCity = (post, json) => {
+            this.setState({
+                city: json.find(function (city) {
+                    return city.id === post.cityId;
                 })
             });
         };
@@ -31,11 +39,20 @@ class Details extends Component {
                     .then(json => {
                         getUser(this.state.post, json);
                     });
+            })
+            .then(() => {
+                fetch('https://my-json-server.typicode.com/fidanabbasova/petsavers-db/cities/')
+                    .then(response => response.json())
+                    .then(json => {
+                        getCity(this.state.post, json);
+                    });
             });
     };
     render() {
-        const {id, name, description, image, date, statusId} = this.state.post;
+        const {id, name, description, image, statusId} = this.state.post;
         const {name: userName, surname: userSurname, mobile} = this.state.user;
+        const {name: city} = this.state.city;
+        let date =  this.state.post.date;
         const getStatus = () => {
             switch (statusId) {
                 case "1": return "Lost";
@@ -48,7 +65,7 @@ class Details extends Component {
                 <div className='details-section container-fluid'>
                     <div className='container'>
                         <div className="row">
-                            <div className="col-md-4">
+                            <div className="col-md-6">
                                 <div className='pet-img-container'>
                                     <div className="pet-img" style={{ backgroundImage: "url("+ image +")"}}></div>
                                     <div className="pet-hover d-flex justify-content-center align-items-center">
@@ -56,13 +73,14 @@ class Details extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-md-8">
+                            <div className="col-md-6">
                                 <div className="pet-content pet-content-item">
                                     <h3 className="pet-name font-weight-bold">{name}</h3>
                                     <h3 className="pet-description">{description}</h3>
                                     <h3 className="user">{getStatus()} by <strong>{userName} {userSurname}</strong></h3>
                                     <h3 className="contact"><i className="fas fa-phone"></i> {mobile}</h3>
-                                    <h3 className="found-date"><i className="far fa-clock font-weight-bold"></i> {date}</h3>
+                                    <h3 className="city"><i className="fas fa-map-marker-alt"></i> {city}</h3>
+                                    <h3 className="date"><i className="fas fa-clock font-weight-bold"></i> {date}</h3>
                                 </div>
                             </div>
                         </div>

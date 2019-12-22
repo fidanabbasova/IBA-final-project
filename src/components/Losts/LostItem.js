@@ -32,7 +32,7 @@ class LostItem extends Component{
         const {name: userName, surname: userSurname, mobile} = this.state.user;
         return(
             <div className="col-md-3 col-sm-6 my-5 mb-sm-0">
-                <Link to={'/lost/' + id} className="lost-container d-block">
+                <Link to={'/losts/' + id} className="lost-container d-block">
                     <div className='lost-img-container'>
                         <div className="lost-img" style={{ backgroundImage: "url("+ image +")"}}></div>
                         <div className="lost-hover d-flex justify-content-center align-items-center">

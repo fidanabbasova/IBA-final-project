@@ -21,8 +21,8 @@ function App() {
                   <Route path="/" exact={true} component={Home}/>
                   <Route path="/losts/:id" component={Details}/>
                   <Route path="/founds/:id" component={Details}/>
-                  <Route path="/losts" component={Losts}/>
-                  <Route path="/founds" component={Founds}/>
+                  <Route path="/losts/" component={Losts}/>
+                  <Route path="/founds/" component={Founds}/>
               </Switch>
           </Router>
       </div>
