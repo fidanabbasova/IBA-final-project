@@ -4,6 +4,7 @@ import Headroom from 'react-headroom';
 import Navbar from './components/Navbar/Navbar';
 import SignUpModal from "./components/Modals/SignUpModal";
 import SignInModal from "./components/Modals/SignInModal";
+import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
 import Losts from "./components/Losts/Losts";
 import Founds from "./components/Founds/Founds";
@@ -24,6 +25,7 @@ function App() {
                   <Route path="/losts/" component={Losts}/>
                   <Route path="/founds/" component={Founds}/>
               </Switch>
+              <Footer/>
           </Router>
       </div>
   );

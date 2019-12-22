@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router, Link, Route, Switch, useParams} from "react-router-dom";
 import './details.scss'
-import icon from "../Founds/img/icon.png";
+import icon from "./img/icon.png";
 class Details extends Component {
     constructor(props) {
         super(props);
