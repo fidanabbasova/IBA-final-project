@@ -9,8 +9,6 @@ class CarouselTarget extends Component {
                 </li>
             );
         }else {
-            console.log("dkfljsf");
-
             return(
                 <li data-target="#home" data-slide-to={dataId} className="carousel-indicators-list">
                     <i className="fas fa-paw carousel-indicators-icon"></i>
